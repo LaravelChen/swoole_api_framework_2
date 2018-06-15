@@ -1,0 +1,54 @@
+{
+    "name": "easyswoole/app",
+    "description": "the new easyswoole application",
+    "type": "project",
+    "authors": [
+        {
+            "name": "YF",
+            "email": "291323003@qq.com"
+        },
+        {
+            "name": "evalor",
+            "email": "mipone@foxmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.1.0",
+        "easyswoole/easyswoole": "2.x-dev",
+        "easyswoole/swoole-ide-helper": "^1.0",
+        "illuminate/database": "^5.5",
+        "jenssegers/blade": "^1.1",
+        "overtrue/easy-sms": "^1.0",
+        "illuminate/pagination": "^5.5",
+        "illuminate/validation": "^5.5",
+        "illuminate/cache": "^5.5",
+        "illuminate/redis": "^5.5",
+        "predis/predis": "^1.1",
+        "lcobucci/jwt": "^3.2",
+        "illuminate/hashing": "^5.5",
+        "illuminate/encryption": "^5.5"
+    },
+    "require-dev": {
+        "composer/composer": "^1.6"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "App/",
+            "Conf\\": "Conf/"
+        },
+        "files": [
+            "helpers.php"
+        ]
+    },
+    "scripts": {
+        "post-create-project-cmd": [
+            "App\\Run::postCreateCmd"
+        ]
+    },
+    "repositories": {
+        "packagist": {
+            "type": "composer",
+            "url": "https://packagist.phpcomposer.com"
+        }
+    }
+}
