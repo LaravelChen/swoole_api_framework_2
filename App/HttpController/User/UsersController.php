@@ -13,9 +13,13 @@ use EasySwoole\Core\Component\Logger;
  */
 class UsersController extends IndexController
 {
+    /**
+     * 返回Hello EasySwoole文本信息
+     * @return bool
+     */
     public function index()
     {
-        $this->success("Hello EasySwoole");
+        return $this->success("Hello EasySwoole");
     }
 
     /**
